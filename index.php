@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Currículos</title>
-    <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -31,7 +30,7 @@
     
     <div class="container mt-5">
         <h1>Preencha seus dados</h1>
-        <form action="form-handler.php" method="POST">
+        <form action="form-handler.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name">Nome:</label>
                 <input type="text" class="form-control" id="name" name="name" required>
@@ -45,6 +44,10 @@
                 <input type="number" class="form-control" id="age" name="age" readonly>
             </div>
             <div class="form-group">
+                <label for="photo">Foto de Perfil:</label>
+                <input type="file" class="form-control" id="photo" name="photo">
+            </div>
+            <div class="form-group">
                 <label for="experience">Experiências Profissionais:</label>
                 <div id="experience-container">
                     <div class="experience-entry">
@@ -53,11 +56,19 @@
                 </div>
                 <button type="button" class="btn btn-primary" id="add-experience">+</button>
             </div>
+            <div class="form-group">
+                <label for="references">Referências Pessoais:</label>
+                <div id="references-container">
+                    <div class="reference-entry">
+                        <input type="text" class="form-control mb-2" name="references[]" placeholder="Nome / Contato">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-reference">+</button>
+            </div>
             <button type="submit" class="btn btn-success">Gerar Currículo</button>
         </form>
     </div>
 
-    <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,12 +1,14 @@
 # Gerador de Currículos
 
-Este projeto é um gerador de currículos desenvolvido em PHP, HTML, CSS, JavaScript e jQuery. Ele permite que os usuários insiram seus dados pessoais, experiências profissionais e, em seguida, gera um currículo formatado para impressão.
+Este projeto é um gerador de currículos desenvolvido em PHP, HTML, CSS, JavaScript e jQuery. Ele permite que os usuários insiram seus dados pessoais, experiências profissionais, referências pessoais, e adicionem uma foto de perfil, em seguida, gera um currículo formatado para impressão.
 
 ## Funcionalidades
 
 - Inclusão de dados pessoais
 - Cálculo automático de idade
+- Adição de foto de perfil
 - Adição dinâmica de campos para experiências profissionais
+- Adição dinâmica de campos para referências pessoais
 - Geração de currículo em formato HTML para impressão
 
 ## Tecnologias Utilizadas

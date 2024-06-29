@@ -1,0 +1,9 @@
+# Ignore generated files
+*.log
+*.cache
+*.temp
+*.bak
+
+# Ignore specific files
+.DS_Store
+Thumbs.db

@@ -13,4 +13,8 @@ $(document).ready(function () {
     $('#add-reference').click(function () {
         $('#references-container').append('<div class="reference-entry"><input type="text" class="form-control mb-2" name="references[]" placeholder="Nome / Contato"></div>');
     });
+
+    $('#add-education').click(function () {
+        $('#education-container').append('<div class="education-entry"><input type="text" class="form-control mb-2" name="education[]" placeholder="Curso / Instituição"></div>');
+    });
 });

@@ -3,8 +3,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = htmlspecialchars($_POST['name']);
     $dob = htmlspecialchars($_POST['dob']);
     $age = htmlspecialchars($_POST['age']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $address = htmlspecialchars($_POST['address']);
     $experiences = $_POST['experience'];
     $references = $_POST['references'];
+    $education = $_POST['education'];
     $photo = '';
 
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
@@ -34,13 +38,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class='container'>
             <h1>$name</h1>
             <p>Data de Nascimento: $dob</p>
-            <p>Idade: $age</p>";
+            <p>Idade: $age</p>
+            <p>E-mail: $email</p>
+            <p>Telefone: $phone</p>
+            <p>Endereço: $address</p>";
 
     if ($photo) {
         $curriculo .= "<img src='$photo' class='profile-photo' alt='Foto de $name'>";
     }
 
     $curriculo .= "
+            <h2>Formação Acadêmica</h2>
+            <ul>";
+
+    foreach ($education as $edu) {
+        $curriculo .= "<li>$edu</li>";
+    }
+
+    $curriculo .= "
+            </ul>
             <h2>Experiências Profissionais</h2>
             <ul>";
 
